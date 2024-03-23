@@ -1,0 +1,16 @@
+/* Write your CSS here */
+.header-container {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 1px #dcdcdc;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 10px 0px;
+}
+.website-logo {
+  width: 50px;
+}
