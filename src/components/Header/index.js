@@ -1,6 +1,5 @@
-// Write your code here
 import Popup from 'reactjs-popup'
-import {Link, withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {IoMdClose} from 'react-icons/io'
 import {AiFillHome} from 'react-icons/ai'
@@ -9,22 +8,22 @@ import {BsInfoCircleFill} from 'react-icons/bs'
 import './index.css'
 
 const Header = () => (
-  <div className="header-container">
-    <div className="header-content">
-      <Link to="/" className="nav-link">
+  <div className="nav-header">
+    <div className="nav-content">
+      <Link to="/">
         <img
+          className="website-logo"
           src="https://assets.ccbp.in/frontend/react-js/hamburger-menu-website-logo.png"
           alt="website logo"
-          className="website-logo"
         />
       </Link>
       <Popup
         modal
         trigger={
           <button
+            className="hamburger-icon-button"
             type="button"
             data-testid="hamburgerIconButton"
-            className="hamburger-icon-button"
           >
             <GiHamburgerMenu size="30" />
           </button>
@@ -32,26 +31,26 @@ const Header = () => (
         className="popup-content"
       >
         {close => (
-          <div className="model-container">
+          <div className="modal-container">
             <button
-              type="button"
               className="close-button"
+              type="button"
               data-testid="closeButton"
               onClick={() => close()}
             >
-              <IoMdClose size="30" />
+              <IoMdClose size="30" color="#616e7c" />
             </button>
-            <ul className="model-container">
-              <li className="list-item">
-                <Link to="/" className="nav-link" onClick={() => close()}>
-                  <AiFillHome size="30" />
-                  <p>Home</p>
+            <ul className="nav-links-list">
+              <li className="nav-link-item">
+                <Link className="nav-link" to="/" onClick={() => close()}>
+                  <AiFillHome size="36" />
+                  <p className="nav-link-content">Home</p>
                 </Link>
               </li>
-              <li className="list-item">
-                <Link to="/about" className="nav-link" onClick={() => close()}>
-                  <BsInfoCircleFill size="30" />
-                  <p>About</p>
+              <li className="nav-link-item">
+                <Link className="nav-link" to="/about" onClick={() => close()}>
+                  <BsInfoCircleFill size="32" />
+                  <p className="nav-link-content">About</p>
                 </Link>
               </li>
             </ul>

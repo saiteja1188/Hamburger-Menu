@@ -1,34 +1,35 @@
-/* Write your CSS here */
 .about-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
-.about-content {
+
+.about-image-container {
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8px;
-  flex-grow: 1;
+  margin-top: 6px;
 }
 
-.mobile-img {
+.mobile-about-image {
   width: 80%;
-}
-
-.desktop-img {
-  width: 100%;
-  max-width: 1110px;
+  max-width: 468px;
 }
 
 @media screen and (min-width: 768px) {
-  .mobile-img {
+  .mobile-about-image {
     display: none;
   }
 }
 
+.desktop-about-image {
+  width: 100%;
+  max-width: 1110px;
+}
+
 @media screen and (max-width: 767px) {
-  .desktop-img {
+  .desktop-about-image {
     display: none;
   }
 }
